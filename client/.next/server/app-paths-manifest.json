@@ -1,0 +1,10 @@
+{
+  "/markets/stocks/page": "app/markets/stocks/page.js",
+  "/markets/indices/page": "app/markets/indices/page.js",
+  "/markets/gold-and-silver/page": "app/markets/gold-and-silver/page.js",
+  "/accounts/standard/page": "app/accounts/standard/page.js",
+  "/markets/eur-usd/page": "app/markets/eur-usd/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/markets/commodities/page": "app/markets/commodities/page.js",
+  "/markets/cryptocurrency/page": "app/markets/cryptocurrency/page.js"
+}

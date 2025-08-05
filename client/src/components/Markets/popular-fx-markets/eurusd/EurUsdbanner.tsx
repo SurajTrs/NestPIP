@@ -1,0 +1,125 @@
+'use client';
+
+import React from 'react';
+import { usePathname } from 'next/navigation';
+
+const marketNavItems = [
+  { icon: '/icons/eur-usd-icon.svg', label: 'EUR-USD' },
+  { icon: '/icons/gbp-usd-icon.svg', label: 'GBP-USD' },
+  { icon: '/icons/usd-jpy-icon.svg', label: 'USD-JPY' },
+  { icon: '/icons/usd-chf-icon.svg', label: 'USD-CHF' },
+  { icon: '/icons/gold-icon.svg', label: 'Gold (XAU-USD)' },
+];
+
+const EurUsdbanner: React.FC = () => {
+  const pathname = usePathname();
+  const currentMarket = pathname?.split('/').pop()?.replace(/-/g, '').toLowerCase();
+
+  return (
+    <section style={{ backgroundColor: '#f24521', color: '#fff', padding: '5rem 0' }}>
+      <div className="container text-center">
+        {/* Market Navigation Scrollbar */}
+        <div
+          className="d-flex justify-content-center gap-3 overflow-auto mb-4 pb-3"
+          style={{ flexWrap: 'nowrap' }}
+        >
+          {marketNavItems.map(({ icon, label }, idx) => {
+            const normalizedLabel = label.replace(/[()\/\s]/g, '').toLowerCase();
+            const isActive = normalizedLabel === currentMarket;
+
+            return (
+              <a
+                key={idx}
+                href={`/markets/${label.toLowerCase().replace(/\s+/g, '-')}`}
+                className={`btn d-flex flex-column align-items-center justify-content-center fw-semibold ${
+                  isActive ? 'btn-light' : 'btn-outline-light'
+                }`}
+                style={{
+                  width: '110px',
+                  height: '110px',
+                  borderRadius: '12px',
+                  flexShrink: 0,
+                  boxShadow: '0 2px 8px rgba(0,0,0,0.2)',
+                  transition: 'background-color 0.3s ease',
+                  backgroundColor: isActive
+                    ? 'rgba(255,255,255,0.3)'
+                    : 'rgba(255,255,255,0.1)',
+                  cursor: 'pointer',
+                  color: isActive ? '#000' : '#fff',
+                }}
+                onMouseEnter={(e) =>
+                  (e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.2)')
+                }
+                onMouseLeave={(e) =>
+                  (e.currentTarget.style.backgroundColor = isActive
+                    ? 'rgba(255,255,255,0.3)'
+                    : 'rgba(255,255,255,0.1)')
+                }
+              >
+                <img src={icon} alt={label} style={{ width: '40px', marginBottom: '0.6rem' }} />
+                <span style={{ fontSize: '0.9rem' }}>{label}</span>
+              </a>
+            );
+          })}
+        </div>
+
+        {/* EUR/USD Hero Content */}
+        <div className="row align-items-center text-md-start text-center mt-5">
+          <div className="col-md-6">
+            <h1 className="fw-bold mb-3" style={{ fontSize: '2.5rem' }}>
+             Use Nestpip to trade EUR/USD and unlock the power of Forex
+
+            </h1>
+            <h2 className="fw-bold mb-3" style={{ fontSize: '1.5rem' }}>
+              The best Forex trading platform for smart, safe, and quick currency trading
+            </h2>
+            <p className="mb-4" style={{ fontSize: '1.2rem', maxWidth: '620px', margin: '0 auto' }}>
+Nestpip is your trusted Forex Trading Platform. For EUR/USD trading, we offer lightning-fast execution, tight spreads, and strong platform features. Nestpip makes trading the most popular currency pair in the world as easy as a few clicks, whether you are a beginner or an expert.
+            </p>
+            <ul
+              className="text-start"
+              style={{
+                fontSize: '1.05rem',
+                lineHeight: 1.6,
+                maxWidth: '420px',
+                margin: '0 auto',
+              }}
+            >
+              <li>Trade with leverage up to 1:500</li>
+              <li>Zero commissions on standard accounts</li>
+              <li>Real-time quotes and advanced charts</li>
+            </ul>
+
+            <div className="d-flex flex-wrap gap-3 justify-content-center justify-content-md-start mt-4">
+              <a
+                href="/open-account"
+                className="btn btn-success fw-bold px-4 py-2"
+                style={{ borderRadius: '12px', minWidth: '150px' }}
+              >
+                Open An Account
+              </a>
+              <a
+                href="/demo-account"
+                className="btn btn-outline-light fw-bold px-4 py-2"
+                style={{ borderRadius: '12px', minWidth: '150px', color: '#fff' }}
+              >
+                Try a Demo Account
+              </a>
+            </div>
+          </div>
+
+          <div className="col-md-6 mt-4 mt-md-0 text-center">
+            <img
+              src="/assets/eurusd-banner.png"
+              alt="Trade EUR/USD"
+              className="img-fluid rounded"
+              style={{ maxHeight: '360px', borderRadius: '16px' }}
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default EurUsdbanner;

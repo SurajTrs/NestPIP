@@ -1,0 +1,341 @@
+/* ==========================================================================
+   1. Base Styles
+   ========================================================================== */
+   body {
+    font-family: 'Inter', sans-serif;
+    color: #333;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+
+  .navbar {
+    z-index: 1000;
+  }
+  
+  .navbar-brand img {
+    height: 40px;
+  }
+  
+  .navbar-nav .nav-link {
+    padding: 0.5rem 1rem;
+    transition: color 0.3s;
+  }
+
+  
+  .navbar .btn {
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  
+
+  .mega-menu {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 100%;
+    z-index: 999;
+    padding: 1rem;
+    display: none;
+  }
+  
+  .nav-item.dropdown:hover .mega-menu {
+    display: block;
+  }
+  
+  .mega-menu h6 {
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  .mega-menu .dropdown-item {
+    padding: 0.25rem 0;
+    font-size: 0.95rem;
+    color: #333;
+  }
+  
+  .mega-menu .dropdown-item:hover {
+    color: #126526;
+  }
+  
+  
+  .btn-success {
+    background-color: #20923b;
+    border-color: #28a745;
+  }
+  
+  .btn-success:hover {
+    background-color: #218838;
+  }
+  
+  .btn-outline-danger {
+    border-color: #dc3545;
+    color: #dc3545;
+  }
+  
+  .btn-outline-danger:hover {
+    background-color: #dc3545;
+    color: #fff;
+  }
+  
+  
+
+  @media (max-width: 991.98px) {
+    .mega-menu {
+      position: static;
+      display: block;
+      padding: 1rem;
+    }
+  
+    .nav-item.dropdown:hover .mega-menu {
+      display: block;
+    }
+  
+    .navbar-collapse {
+      padding-top: 1rem;
+    }
+  }
+
+  .fw-semibold {
+    font-weight: 600;
+  }
+  
+  .fw-bold {
+    font-weight: 700;
+  }
+  
+  .shadow-sm {
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  }
+  
+  .border-bottom {
+    border-bottom: 1px solid #dee6e3 !important;
+  }
+  
+  .gap-3 {
+    gap: 1rem;
+  }
+  /* styles.css */
+
+/* For the ForexPage Component */
+.forex-page-section {
+    background-color: #FFF7F0;
+    padding: 5rem 0;
+  }
+  
+  .nav-buttons-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .nav-button {
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    border-radius: 12px;
+    border-color: #FF7A00;
+  }
+  
+  .nav-button-forex {
+    background-color: #FF7A00;
+    color: white;
+  }
+  
+  .nav-button-others {
+    background-color: transparent;
+    color: #FF7A00;
+    border-color: #FF7A00;
+  }
+  
+  .content-container {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-align: start;
+  }
+  
+  .content-left {
+    flex: 1;
+  }
+  
+  .content-left h1 {
+    color: #FF7A00;
+    font-size: 2.5rem;
+  }
+  
+  .content-left p {
+    font-size: 1.1rem;
+    color: #6c757d;
+  }
+  
+  .content-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .btn-custom {
+    padding: 0.6rem 1.5rem;
+    font-weight: 500;
+    border-radius: 12px;
+  }
+  
+  .btn-open-account {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .btn-demo-account {
+    background-color: transparent;
+    color: #212529;
+  }
+  
+  .features-container {
+    margin-top: 1rem;
+    background-color: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .features-container div {
+    margin-bottom: 0.5rem;
+  }
+  
+  .content-right {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .content-right img {
+    max-width: 460px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .market-box img {
+    filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.1));
+  }
+  
+  .market-box:hover {
+    transform: translateY(-3px);
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  }
+  .btn-outline-primary {
+    color: #FF7A00;
+    border-color: #FF7A00;
+    background-color: transparent;
+  }
+  
+  .btn-outline-primary:hover {
+    background-color: #006400 !important;
+    border-color: #006400 !important;
+    color: #fff !important;
+  }
+
+ 
+  
+  .logo-top-left {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    width: 90px;
+    height: auto;
+    z-index: 3;
+  }
+  
+  .text-section {
+    max-width: 55%;
+    z-index: 2;
+    position: relative;
+  }
+  
+  .headline {
+    font-weight: 700;
+    font-size: 2.2rem;
+    line-height: 1.2;
+    margin-bottom: 1.4rem;
+    letter-spacing: 0.05em;
+  }
+  
+  .paragraph {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+    max-width: 90%;
+    font-weight: 400;
+  }
+  
+  .features-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 400;
+  }
+  
+  .features-list li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.8rem;
+  }
+  
+
+/* CTA button */
+.btn-primary {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  background: #4caf50;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.1rem;
+  border-radius: 30px;
+  text-decoration: none;
+  box-shadow: 0 8px 20px rgb(76 175 80 / 0.4);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background: #43a047;
+  box-shadow: 0 12px 30px rgb(67 160 71 / 0.6);
+  outline: none;
+}
+.loginWrapper {
+  background: linear-gradient(to right, #a64ac9, #6200ea);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.leftPanel {
+  flex: 1;
+  background-color: #ffffff;
+  padding: 3rem;
+  border-radius: 1rem 0 0 1rem;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.rightPanel {
+  flex: 2;
+  background: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+  padding: 3rem;
+  border-radius: 0 1rem 1rem 0;
+  background-image: url('/images/background-wave.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+

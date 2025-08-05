@@ -1,0 +1,68 @@
+{
+  "pages": {
+    "/not-found": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/not-found.js"
+    ],
+    "/_not-found/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/_not-found/page.js"
+    ],
+    "/layout": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/layout.css",
+      "static/chunks/app/layout.js"
+    ],
+    "/markets/commodities/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/markets/commodities/page.css",
+      "static/chunks/app/markets/commodities/page.js"
+    ],
+    "/markets/forex/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/markets/forex/page.js"
+    ],
+    "/markets/indices/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/markets/indices/page.js"
+    ],
+    "/markets/cryptocurrency/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/markets/cryptocurrency/page.js"
+    ],
+    "/markets/crude-oil/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/markets/crude-oil/page.css",
+      "static/chunks/app/markets/crude-oil/page.js"
+    ],
+    "/markets/stocks/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/markets/stocks/page.js"
+    ],
+    "/markets/gold-and-silver/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/markets/gold-and-silver/page.js"
+    ],
+    "/accounts/standard/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/accounts/standard/page.js"
+    ],
+    "/markets/eur-usd/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/markets/eur-usd/page.css",
+      "static/chunks/app/markets/eur-usd/page.js"
+    ]
+  }
+}

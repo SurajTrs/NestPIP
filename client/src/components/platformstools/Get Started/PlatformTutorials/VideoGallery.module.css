@@ -1,0 +1,26 @@
+/* VideoGallery.module.css */
+.gallerySection {
+  background-color: #fff3e9; /* Light orange background */
+  color: #212529; /* Dark text */
+}
+
+.nav-tabs .nav-link {
+  color: #212529;
+  border: none;
+  font-weight: 500;
+}
+
+.nav-tabs .nav-link.active {
+  background-color: #f24521;
+  color: #fff;
+  border-radius: 0.25rem;
+}
+
+.ratio iframe {
+  border: 2px solid #f24521;
+  border-radius: 8px;
+}
+
+.text-white {
+  color: #212529 !important; /* Overriding to use dark text */
+}
